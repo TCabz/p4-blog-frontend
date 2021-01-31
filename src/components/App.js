@@ -62,7 +62,7 @@ export const App = (props) => {
     //prevent form from refreshing screen
     event.preventDefault();
     //make post request to our backend server
-    const response = await fetch("http://localhost:3001/blogs", {
+    const response = await fetch("https://p4-blog-backend-heroku.herokuapp.com/", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -86,7 +86,7 @@ export const App = (props) => {
     event.preventDefault();
     //make put request to our backend server
     const response = await fetch(
-      "http://localhost:3001/blogs/" + updateForm.id,
+      "https://p4-blog-backend-heroku.herokuapp.com/" + updateForm.id,
       {
         method: "put",
         headers: {
@@ -105,7 +105,7 @@ export const App = (props) => {
     //prevent form from refreshing screen
     event.preventDefault();
     //make delete request to our backend server
-    const response = await fetch("http://localhost:3001/blogs/" + blog.id, {
+    const response = await fetch("https://p4-blog-backend-heroku.herokuapp.com/" + blog.id, {
       method: "delete",
     });
     //update the list of blogs be refetching the list
