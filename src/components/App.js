@@ -27,7 +27,8 @@ export const App = (props) => {
   //Our function to grab the latest list of blogs
   const getBlogs = async () => {
     //We make a request to our backend server
-    const response = await fetch("http://localhost:3001/blogs");
+    const response = await fetch("
+    https://git.heroku.com/p4-blog-backend-heroku.git");
     //Convert the response into a javascript object
     const data = await response.json();
     //assign the data to our state
