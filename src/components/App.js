@@ -27,7 +27,7 @@ export const App = (props) => {
   //Our function to grab the latest list of blogs
   const getBlogs = async () => {
     //We make a request to our backend server
-    const response = await fetch("http://localhost:3001/blogs");
+    const response = await fetch("http://localhost:3000/blogs");
     //Convert the response into a javascript object
     const data = await response.json();
     //assign the data to our state
@@ -61,7 +61,7 @@ export const App = (props) => {
     //prevent form from refreshing screen
     event.preventDefault();
     //make post request to our backend server
-    const response = await fetch("http://localhost:3001/blogs", {
+    const response = await fetch("http://localhost:3000/blogs", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -85,7 +85,7 @@ export const App = (props) => {
     event.preventDefault();
     //make put request to our backend server
     const response = await fetch(
-      "http://localhost:3001/blogs/" + updateForm.id,
+      "http://localhost:3000/blogs/" + updateForm.id,
       {
         method: "put",
         headers: {
@@ -104,7 +104,7 @@ export const App = (props) => {
     //prevent form from refreshing screen
     event.preventDefault();
     //make delete request to our backend server
-    const response = await fetch("http://localhost:3001/blogs/" + blog.id, {
+    const response = await fetch("http://localhost:3000/blogs/" + blog.id, {
       method: "delete",
     });
     //update the list of blogs be refetching the list
